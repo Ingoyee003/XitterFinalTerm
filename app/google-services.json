@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "669769380711",
+    "project_id": "xetter-fb",
+    "storage_bucket": "xetter-fb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:669769380711:android:b816fee85fd05e109175c2",
+        "android_client_info": {
+          "package_name": "com.xetterfb.xetterchat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdFy4GcPNZPQLfrCyi_lgiZgjUi2lN6V0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,36 @@
+package com.xetterfb.xetterchat;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+
+import com.xetterfb.xetterchat.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.xetterfb.xetterchat.welcome.IntroLast;
+
+public class Check extends AppCompatActivity {
+    private FirebaseAuth mAuth;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_check);
+        mAuth = FirebaseAuth.getInstance();
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser == null){
+            Intent intent = new Intent(Check.this, IntroLast.class);
+            startActivity(intent);
+        }else {
+            Intent intent = new Intent(Check.this, MainActivity.class);
+            startActivity(intent);
+        }
+        finish();
+    }
+}
